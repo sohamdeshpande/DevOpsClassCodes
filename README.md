@@ -68,4 +68,4 @@ To use the built in server adapters of Eclipse, instead of doing "Run As -> Mave
 *** End of documentation
 commit history:
 this is first commit for compile
-compile is success, now linking this to pmd goal
+compile is success, now linking this to pmd goal one after other
