@@ -4,6 +4,7 @@ pipeline  {
 	stage("git Checkout"){
 	  steps{
 	  	git 'https://github.com/edureka-git/DevOpsClassCodes'
+	  	echo env.JOB_DISPLAY_UR
 	  }
 	}
 	
