@@ -1,0 +1,15 @@
+pipeline  {
+	agent any
+	stages {
+       
+       stage("build"){
+       		dir('') {
+ 						sh 'mvn -B -V -U -e clean package'
+ 					}	
+
+       }
+
+	}
+
+
+}
