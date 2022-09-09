@@ -1,19 +1,21 @@
-pipeline  {
-	agent any
-	stages {
-	stage("git Checkout"){
-	  steps{
-	  	git 'https://github.com/edureka-git/DevOpsClassCodes'
-	  	echo env.JOB_DISPLAY_UR
-	  }
-	}
-	stage("build"){
-	  steps{
-	  	dir(''){
-	  	sh 'mvn -B -V -U -e clean package'
-	  	}
-	  }
-	}
-	}
+pipeline {
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
