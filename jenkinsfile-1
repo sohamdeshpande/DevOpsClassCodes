@@ -1,8 +1,13 @@
 pipeline  {
 	agent any
 	stages {
+	
+	stage('git Checkout') {
+ git 'https://github.com/edureka-git/DevOpsClassCodes'
+
+ }
        
-       stage("build"){
+       stage('build'){
        		dir('') {
  						sh 'mvn -B -V -U -e clean package'
  					}	
